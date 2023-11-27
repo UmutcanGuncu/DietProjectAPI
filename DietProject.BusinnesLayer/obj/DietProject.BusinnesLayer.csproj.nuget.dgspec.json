@@ -1,0 +1,211 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/umutcanguncu/Projects/DietProject/DietProject.BusinnesLayer/DietProject.BusinnesLayer.csproj": {}
+  },
+  "projects": {
+    "/Users/umutcanguncu/Projects/DietProject/DietProject.BusinnesLayer/DietProject.BusinnesLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/umutcanguncu/Projects/DietProject/DietProject.BusinnesLayer/DietProject.BusinnesLayer.csproj",
+        "projectName": "DietProject.BusinnesLayer",
+        "projectPath": "/Users/umutcanguncu/Projects/DietProject/DietProject.BusinnesLayer/DietProject.BusinnesLayer.csproj",
+        "packagesPath": "/Users/umutcanguncu/.nuget/packages/",
+        "outputPath": "/Users/umutcanguncu/Projects/DietProject/DietProject.BusinnesLayer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/umutcanguncu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/umutcanguncu/Projects/DietProject/DietProject.DataAccessLayer/DietProject.DataAccessLayer.csproj": {
+                "projectPath": "/Users/umutcanguncu/Projects/DietProject/DietProject.DataAccessLayer/DietProject.DataAccessLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/umutcanguncu/Projects/DietProject/DietProject.DataAccessLayer/DietProject.DataAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/umutcanguncu/Projects/DietProject/DietProject.DataAccessLayer/DietProject.DataAccessLayer.csproj",
+        "projectName": "DietProject.DataAccessLayer",
+        "projectPath": "/Users/umutcanguncu/Projects/DietProject/DietProject.DataAccessLayer/DietProject.DataAccessLayer.csproj",
+        "packagesPath": "/Users/umutcanguncu/.nuget/packages/",
+        "outputPath": "/Users/umutcanguncu/Projects/DietProject/DietProject.DataAccessLayer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/umutcanguncu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/umutcanguncu/Projects/DietProject/DietProject.EntityLayer/DietProject.EntityLayer.csproj": {
+                "projectPath": "/Users/umutcanguncu/Projects/DietProject/DietProject.EntityLayer/DietProject.EntityLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[7.0.6, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/umutcanguncu/Projects/DietProject/DietProject.EntityLayer/DietProject.EntityLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/umutcanguncu/Projects/DietProject/DietProject.EntityLayer/DietProject.EntityLayer.csproj",
+        "projectName": "DietProject.EntityLayer",
+        "projectPath": "/Users/umutcanguncu/Projects/DietProject/DietProject.EntityLayer/DietProject.EntityLayer.csproj",
+        "packagesPath": "/Users/umutcanguncu/.nuget/packages/",
+        "outputPath": "/Users/umutcanguncu/Projects/DietProject/DietProject.EntityLayer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/umutcanguncu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
