@@ -11,8 +11,7 @@ namespace DietProject.EntityLayer.Entities
 		public int Fat { get; set; }
 		public int Carbonhydrate { get; set; }
 		public int Protein { get; set; }
-        public int MealId { get; set; }
-		public Meal Meal { get; set; }
+        public ICollection<Meal> Meals { get; set; } = new List<Meal>();
     }
 }
 

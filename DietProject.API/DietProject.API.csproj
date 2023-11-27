@@ -28,7 +28,7 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DietProject.DataAccessLayer\DietProject.DataAccessLayer.csproj">
+    <ProjectReference Include="..\DietProject.BusinnesLayer\DietProject.BusinnesLayer.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>

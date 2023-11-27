@@ -588,6 +588,19 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
+      "DietProject.BusinnesLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DietProject.DataAccessLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DietProject.BusinnesLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DietProject.BusinnesLayer.dll": {}
+        }
+      },
       "DietProject.DataAccessLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1677,6 +1690,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "DietProject.BusinnesLayer/1.0.0": {
+      "type": "project",
+      "path": "../DietProject.BusinnesLayer/DietProject.BusinnesLayer.csproj",
+      "msbuildProject": "../DietProject.BusinnesLayer/DietProject.BusinnesLayer.csproj"
+    },
     "DietProject.DataAccessLayer/1.0.0": {
       "type": "project",
       "path": "../DietProject.DataAccessLayer/DietProject.DataAccessLayer.csproj",
@@ -1690,7 +1708,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "DietProject.DataAccessLayer >= 1.0.0",
+      "DietProject.BusinnesLayer >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.14",
       "Microsoft.AspNetCore.OpenApi >= 7.0.14",
       "Microsoft.EntityFrameworkCore >= 7.0.14",
@@ -1726,8 +1744,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/umutcanguncu/Projects/DietProject/DietProject.DataAccessLayer/DietProject.DataAccessLayer.csproj": {
-              "projectPath": "/Users/umutcanguncu/Projects/DietProject/DietProject.DataAccessLayer/DietProject.DataAccessLayer.csproj"
+            "/Users/umutcanguncu/Projects/DietProject/DietProject.BusinnesLayer/DietProject.BusinnesLayer.csproj": {
+              "projectPath": "/Users/umutcanguncu/Projects/DietProject/DietProject.BusinnesLayer/DietProject.BusinnesLayer.csproj"
             }
           }
         }

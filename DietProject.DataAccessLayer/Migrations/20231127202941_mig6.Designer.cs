@@ -3,6 +3,7 @@ using System;
 using DietProject.DataAccessLayer.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DietProject.DataAccessLayer.Migrations
 {
     [DbContext(typeof(DietDbContext))]
-    partial class DietDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231127202941_mig6")]
+    partial class mig6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -156,9 +159,6 @@ namespace DietProject.DataAccessLayer.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AppUserId")
-                        .HasColumnType("integer");
-
                     b.Property<DateOnly>("Date")
                         .HasColumnType("date");
 
@@ -167,8 +167,6 @@ namespace DietProject.DataAccessLayer.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AppUserId");
 
                     b.ToTable("meals");
                 });
@@ -338,17 +336,6 @@ namespace DietProject.DataAccessLayer.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("DietProject.EntityLayer.Entities.Meal", b =>
-                {
-                    b.HasOne("DietProject.EntityLayer.Entities.AppUser", "AppUser")
-                        .WithMany("Meals")
-                        .HasForeignKey("AppUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AppUser");
-                });
-
             modelBuilder.Entity("DietProject.EntityLayer.Entities.UserInformation", b =>
                 {
                     b.HasOne("DietProject.EntityLayer.Entities.AppUser", "AppUser")
@@ -428,8 +415,6 @@ namespace DietProject.DataAccessLayer.Migrations
 
             modelBuilder.Entity("DietProject.EntityLayer.Entities.AppUser", b =>
                 {
-                    b.Navigation("Meals");
-
                     b.Navigation("UserInformation")
                         .IsRequired();
                 });

@@ -10,6 +10,7 @@ namespace DietProject.DataAccessLayer.Context
         public DietDbContext(DbContextOptions options) : base(options)
         {
         }
+        
         public DbSet<Food> foods { get; set; }
         public DbSet<Meal> meals { get; set; }
         public DbSet<UserInformation> userInformation { get; set; }

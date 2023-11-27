@@ -1,4 +1,8 @@
 ﻿using System;
+using DietProject.BusinnesLayer.Abstracts;
+using DietProject.BusinnesLayer.Concretes;
+using DietProject.DataAccessLayer.Abstracts;
+using DietProject.DataAccessLayer.Concretes;
 using DietProject.DataAccessLayer.Context;
 using DietProject.EntityLayer.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +22,8 @@ builder.Services.AddDbContext<DietDbContext>(opt =>
 );
 
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<DietDbContext>();
+builder.Services.AddScoped<IFoodService, FoodManager>();
+builder.Services.AddScoped<IFoodDal, EfFoodDal>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
