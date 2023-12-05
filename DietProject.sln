@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DietProject.BusinnesLayer",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DietProject.DataAccessLayer", "DietProject.DataAccessLayer\DietProject.DataAccessLayer.csproj", "{4BC454D9-4C9C-41BB-B056-B7F4FAEEB24D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DietProject.DTO", "DietProject.DTO\DietProject.DTO.csproj", "{D345B931-F311-474A-AB98-12E885789ACE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4BC454D9-4C9C-41BB-B056-B7F4FAEEB24D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BC454D9-4C9C-41BB-B056-B7F4FAEEB24D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BC454D9-4C9C-41BB-B056-B7F4FAEEB24D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D345B931-F311-474A-AB98-12E885789ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D345B931-F311-474A-AB98-12E885789ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D345B931-F311-474A-AB98-12E885789ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D345B931-F311-474A-AB98-12E885789ACE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

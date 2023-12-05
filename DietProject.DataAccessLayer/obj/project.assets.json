@@ -482,6 +482,16 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
+      "DietProject.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/DietProject.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DietProject.DTO.dll": {}
+        }
+      },
       "DietProject.EntityLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1204,6 +1214,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "DietProject.DTO/1.0.0": {
+      "type": "project",
+      "path": "../DietProject.DTO/DietProject.DTO.csproj",
+      "msbuildProject": "../DietProject.DTO/DietProject.DTO.csproj"
+    },
     "DietProject.EntityLayer/1.0.0": {
       "type": "project",
       "path": "../DietProject.EntityLayer/DietProject.EntityLayer.csproj",
@@ -1212,6 +1227,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "DietProject.DTO >= 1.0.0",
       "DietProject.EntityLayer >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.14",
       "Microsoft.EntityFrameworkCore >= 7.0.14",
@@ -1246,6 +1262,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "/Users/umutcanguncu/Projects/DietProject/DietProject.DTO/DietProject.DTO.csproj": {
+              "projectPath": "/Users/umutcanguncu/Projects/DietProject/DietProject.DTO/DietProject.DTO.csproj"
+            },
             "/Users/umutcanguncu/Projects/DietProject/DietProject.EntityLayer/DietProject.EntityLayer.csproj": {
               "projectPath": "/Users/umutcanguncu/Projects/DietProject/DietProject.EntityLayer/DietProject.EntityLayer.csproj"
             }

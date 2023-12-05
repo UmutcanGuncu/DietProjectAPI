@@ -355,6 +355,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "DietProject.DTO": "1.0.0",
           "DietProject.EntityLayer": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.14",
           "Microsoft.EntityFrameworkCore": "7.0.14",
@@ -366,6 +367,16 @@
         },
         "runtime": {
           "bin/placeholder/DietProject.DataAccessLayer.dll": {}
+        }
+      },
+      "DietProject.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/DietProject.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DietProject.DTO.dll": {}
         }
       },
       "DietProject.EntityLayer/1.0.0": {
@@ -872,6 +883,11 @@
       "type": "project",
       "path": "../DietProject.DataAccessLayer/DietProject.DataAccessLayer.csproj",
       "msbuildProject": "../DietProject.DataAccessLayer/DietProject.DataAccessLayer.csproj"
+    },
+    "DietProject.DTO/1.0.0": {
+      "type": "project",
+      "path": "../DietProject.DTO/DietProject.DTO.csproj",
+      "msbuildProject": "../DietProject.DTO/DietProject.DTO.csproj"
     },
     "DietProject.EntityLayer/1.0.0": {
       "type": "project",
