@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Net.Http.Json;
+using System.Text.Json.Serialization;
 using DietProject.BusinnesLayer.Abstracts;
 using DietProject.DTO.Models;
 using DietProject.EntityLayer.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace DietProject.API.Controllers
 {
@@ -11,9 +15,11 @@ namespace DietProject.API.Controllers
 	public class AuthController : ControllerBase
 	{
 		private readonly IAuthService _authService;
+        private readonly UserManager<AppUser> _userManager;
 
-        public AuthController(IAuthService authService)
+        public AuthController(IAuthService authService, UserManager<AppUser> userManager)
         {
+			_userManager = userManager;
             _authService = authService;
         }
 
@@ -23,11 +29,11 @@ namespace DietProject.API.Controllers
 			var result = await _authService.RegisterUser(user);
 			if(result == true)
 			{
-				return Ok(true);
+				return Ok();
 			}
 			else
 			{
-				return Ok(false);
+				return BadRequest();
 			}
 
 		}
@@ -40,7 +46,13 @@ namespace DietProject.API.Controllers
 			}
 			var result = await _authService.LoginUser(user);
 			if(result == true)
-			return Ok();
+			{
+				var value = await _userManager.FindByEmailAsync(user.Email);
+				var userId = new UserIdDTO { UserId = value.Id };
+				var data = JsonConvert.SerializeObject(userId);
+				return Ok(data);
+			}
+			
 
 			return BadRequest();
 		}

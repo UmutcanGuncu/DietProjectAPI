@@ -22,6 +22,7 @@ namespace DietProject.DataAccessLayer.Concretes
             {
                 return false;
             }
+         
             return await _userManager.CheckPasswordAsync(appUser, user.Password);
         }
 
