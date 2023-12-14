@@ -1,5 +1,6 @@
 ﻿using System;
 using DietProject.BusinnesLayer.Abstracts;
+using DietProject.DataAccessLayer.Context;
 using DietProject.EntityLayer.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,10 +11,12 @@ namespace DietProject.API.Controllers
 	public class UserInformationController : ControllerBase
 	{
 		private readonly IUserInformationService _userInformationService;
+        private readonly DietDbContext _context;
 
-        public UserInformationController(IUserInformationService userInformationService)
+        public UserInformationController(IUserInformationService userInformationService, DietDbContext context)
         {
             _userInformationService = userInformationService;
+            _context = context;
         }
         [HttpGet]
         public IActionResult GetUserInformationList()
@@ -24,7 +27,8 @@ namespace DietProject.API.Controllers
         [HttpPost]
         public IActionResult AddUserInformation(UserInformation userInformation)
         {
-            _userInformationService.Add(userInformation);
+
+            _userInformationService.AddOrUpdate(userInformation);
             return Ok();
 
         }

@@ -6,39 +6,39 @@ namespace DietProject.DataAccessLayer.Concretes
 {
     public class GenericRepository<T> : IGenericDal<T> where T:class
     {
-        private readonly DietDbContext _context;
+        private readonly DietDbContext context;
 
         public GenericRepository(DietDbContext context)
         {
-            _context = context;
+            this.context = context;
         }
 
         public void Add(T t)
         {
-            _context.Add(t);
-            _context.SaveChanges();
+            context.Add(t);
+            context.SaveChanges();
         }
 
         public void Delete(T t)
         {
-            _context.Remove(t);
-            _context.SaveChanges();
+            context.Remove(t);
+            context.SaveChanges();
         }
 
         public T GetById(int id)
         {
-            return _context.Set<T>().Find(id);
+            return context.Set<T>().Find(id);
         }
 
         public List<T> GetList()
         {
-            return _context.Set<T>().ToList();
+            return context.Set<T>().ToList();
         }
 
         public void Update(T t)
         {
-            _context.Update(t);
-            _context.SaveChanges();
+            context.Update(t);
+            context.SaveChanges();
 
         }
     }

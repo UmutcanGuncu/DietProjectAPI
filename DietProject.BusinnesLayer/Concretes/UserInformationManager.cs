@@ -19,6 +19,11 @@ namespace DietProject.BusinnesLayer.Concretes
             _userInformationDal.Add(t);
         }
 
+        public void AddOrUpdate(UserInformation userInformation)
+        {
+            _userInformationDal.AddOrUpdate(userInformation);
+        }
+
         public void Delete(UserInformation t)
         {
             _userInformationDal.Delete(t);

@@ -3,6 +3,7 @@ using System;
 using DietProject.DataAccessLayer.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DietProject.DataAccessLayer.Migrations
 {
     [DbContext(typeof(DietDbContext))]
-    partial class DietDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231214132148_migUpdateGenderType")]
+    partial class migUpdateGenderType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -196,30 +199,30 @@ namespace DietProject.DataAccessLayer.Migrations
                     b.Property<int>("AppUserId")
                         .HasColumnType("integer");
 
-                    b.Property<double>("DailyCalorieRequirement")
-                        .HasColumnType("double precision");
+                    b.Property<int>("DailyCalorieRequirement")
+                        .HasColumnType("integer");
 
-                    b.Property<double>("DailyCarbonhydrateRequirement")
-                        .HasColumnType("double precision");
+                    b.Property<int>("DailyCarbonhydrateRequirement")
+                        .HasColumnType("integer");
 
-                    b.Property<double>("DailyFatRequirement")
-                        .HasColumnType("double precision");
+                    b.Property<int>("DailyFatRequirement")
+                        .HasColumnType("integer");
 
-                    b.Property<double>("DailyProteinRequirement")
-                        .HasColumnType("double precision");
+                    b.Property<int>("DailyProteinRequirement")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Gender")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<double>("Length")
-                        .HasColumnType("double precision");
+                    b.Property<int>("Length")
+                        .HasColumnType("integer");
 
-                    b.Property<double>("TargetWeight")
-                        .HasColumnType("double precision");
+                    b.Property<int>("TargetWeight")
+                        .HasColumnType("integer");
 
-                    b.Property<double>("Weight")
-                        .HasColumnType("double precision");
+                    b.Property<int>("Weight")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
