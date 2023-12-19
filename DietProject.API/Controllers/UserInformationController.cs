@@ -46,11 +46,12 @@ namespace DietProject.API.Controllers
             return Ok();
         }
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public IActionResult GetByAppUserId(int id)
         {
-            var value = _userInformationService.GetById(id);
+            var value = _userInformationService.GetByAppUserId(id);
             return Ok(value);
         }
+        
     }
 }
 

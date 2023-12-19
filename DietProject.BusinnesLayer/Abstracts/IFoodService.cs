@@ -5,6 +5,8 @@ namespace DietProject.BusinnesLayer.Abstracts
 {
 	public interface IFoodService : IGenericService<Food>
 	{
-	}
+        public List<Food> getFoodWithType(string type);
+
+    }
 }
 

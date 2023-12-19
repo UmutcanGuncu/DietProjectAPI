@@ -9,6 +9,7 @@ namespace DietProject.DataAccessLayer.Concretes
     {
         public EfMealDal(DietDbContext context) : base(context)
         {
+            
         }
     }
 }

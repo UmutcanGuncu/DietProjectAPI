@@ -27,6 +27,12 @@ namespace DietProject.API.Controllers
             var values = _foodService.GetList();
             return Ok(values);
         }
+        [HttpGet("getFoodWithType/{type}")]
+        public IActionResult getFoodWithType(string type)
+        {
+            var values = _foodService.getFoodWithType(type);
+            return Ok(values);
+        }
         [HttpPost]
         public IActionResult AddFood(Food food)
         {

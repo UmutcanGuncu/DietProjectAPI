@@ -3,6 +3,7 @@ using System;
 using DietProject.DataAccessLayer.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DietProject.DataAccessLayer.Migrations
 {
     [DbContext(typeof(DietDbContext))]
-    partial class DietDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231215170417_migAddedCalorie")]
+    partial class migAddedCalorie
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -150,10 +153,6 @@ namespace DietProject.DataAccessLayer.Migrations
                     b.Property<double>("Protein")
                         .HasColumnType("double precision");
 
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.HasKey("Id");
 
                     b.ToTable("foods");
@@ -210,9 +209,6 @@ namespace DietProject.DataAccessLayer.Migrations
 
                     b.Property<double>("DailyProteinRequirement")
                         .HasColumnType("double precision");
-
-                    b.Property<int>("DietDay")
-                        .HasColumnType("integer");
 
                     b.Property<string>("Gender")
                         .IsRequired()

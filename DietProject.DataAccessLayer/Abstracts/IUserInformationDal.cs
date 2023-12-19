@@ -10,6 +10,7 @@ namespace DietProject.DataAccessLayer.Abstracts
         void Delete(UserInformation t);
         void Update(UserInformation t);
         UserInformation GetById(int id);
+        UserInformation GetByAppUserId(int id);
         public void AddOrUpdate(UserInformation userInformation);
     }
 }

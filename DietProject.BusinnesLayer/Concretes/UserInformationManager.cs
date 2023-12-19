@@ -29,6 +29,11 @@ namespace DietProject.BusinnesLayer.Concretes
             _userInformationDal.Delete(t);
         }
 
+        public UserInformation GetByAppUserId(int id)
+        {
+            return _userInformationDal.GetByAppUserId(id);
+        }
+
         public UserInformation GetById(int id)
         {
             return _userInformationDal.GetById(id);

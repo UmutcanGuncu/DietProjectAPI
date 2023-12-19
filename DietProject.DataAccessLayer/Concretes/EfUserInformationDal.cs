@@ -44,6 +44,7 @@ namespace DietProject.DataAccessLayer.Concretes
                     DailyCarbonhydrateRequirement = userInformation.DailyCarbonhydrateRequirement,
                     DailyFatRequirement = userInformation.DailyFatRequirement,
                     DailyProteinRequirement = userInformation.DailyProteinRequirement,
+                    DietDay = value.DietDay,
                     AppUserId = userInformation.AppUserId,
                     Gender = userInformation.Gender
 
@@ -58,6 +59,11 @@ namespace DietProject.DataAccessLayer.Concretes
         {
             context.Remove(t);
             context.SaveChanges();
+        }
+
+        public UserInformation GetByAppUserId(int id)
+        {
+            return context.Set<UserInformation>().Where(x => x.AppUserId == id).FirstOrDefault();
         }
 
         public UserInformation GetById(int id)

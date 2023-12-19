@@ -14,6 +14,7 @@ namespace DietProject.EntityLayer.Entities
         public double DailyCarbonhydrateRequirement { get; set; } //Günlük Karbonhidrat İhtiyacı
 		public string Gender { get; set; }
 		public string Age { get; set; }
+		public int DietDay { get; set; }
 		public int AppUserId { get; set; }
 		public AppUser? AppUser { get; set; }
     }

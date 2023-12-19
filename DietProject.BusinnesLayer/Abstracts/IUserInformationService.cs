@@ -6,6 +6,7 @@ namespace DietProject.BusinnesLayer.Abstracts
 	public interface IUserInformationService : IGenericService<UserInformation>
 	{
         public void AddOrUpdate(UserInformation userInformation);
+        public UserInformation GetByAppUserId(int id);
     }
 }
 

@@ -29,6 +29,11 @@ namespace DietProject.BusinnesLayer.Concretes
             return _foodDal.GetById(id);
         }
 
+        public List<Food> getFoodWithType(string type)
+        {
+            return _foodDal.getFoodWithType(type);
+        }
+
         public List<Food> GetList()
         {
             return _foodDal.GetList();

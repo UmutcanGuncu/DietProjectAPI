@@ -6,11 +6,11 @@ namespace DietProject.EntityLayer.Entities
 	public class Food : BaseEntity
 	{
 		public string Name { get; set; }
-		public string ImageUrl { get; set; }
-		public int Calorie { get; }
-		public int Fat { get; set; }
-		public int Carbonhydrate { get; set; }
-		public int Protein { get; set; }
+		public double Calorie { get; set; }
+		public double Fat { get; set; }
+		public double Carbonhydrate { get; set; }
+		public double Protein { get; set; }
+		public string Type { get; set; }
         public ICollection<Meal> Meals { get; set; } = new List<Meal>();
     }
 }
