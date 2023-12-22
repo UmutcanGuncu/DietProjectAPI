@@ -1,5 +1,6 @@
 ﻿using System;
 using DietProject.BusinnesLayer.Abstracts;
+using DietProject.DTO.Models;
 using DietProject.EntityLayer.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +21,12 @@ namespace DietProject.API.Controllers
         {
             var values = _mealService.GetList();
             return Ok(values);
+        }
+        [HttpPost("addMealFood")]
+        public IActionResult AddMealFood(MealFoodDto model)
+        {
+            _mealService.AddMealFood(model);
+            return Ok();
         }
         [HttpPost]
         public IActionResult AddMeal(Meal meal)

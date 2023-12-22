@@ -1,6 +1,7 @@
 ﻿using System;
 using DietProject.BusinnesLayer.Abstracts;
 using DietProject.DataAccessLayer.Abstracts;
+using DietProject.DTO.Models;
 using DietProject.EntityLayer.Entities;
 
 namespace DietProject.BusinnesLayer.Concretes
@@ -17,6 +18,11 @@ namespace DietProject.BusinnesLayer.Concretes
         public void Add(Meal t)
         {
             _mealDal.Add(t);
+        }
+
+        public void AddMealFood(MealFoodDto model)
+        {
+            _mealDal.AddMealFood(model);
         }
 
         public void Delete(Meal t)

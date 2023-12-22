@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 builder.Services.AddControllers();
 builder.Services.AddCors(opt => opt.AddDefaultPolicy(policy =>
@@ -23,7 +23,6 @@ builder.Services.AddDbContext<DietDbContext>(opt =>
 
     opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
-
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<DietDbContext>();
 builder.Services.AddScoped<IFoodService, FoodManager>();
 builder.Services.AddScoped<IFoodDal, EfFoodDal>();
