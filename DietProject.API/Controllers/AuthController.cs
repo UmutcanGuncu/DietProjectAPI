@@ -48,7 +48,7 @@ namespace DietProject.API.Controllers
 			if(result == true)
 			{
 				var value = await _userManager.FindByEmailAsync(user.Email);
-				var userId = new UserIdDTO { UserId = value.Id };
+				var userId = new UserIdDTO { UserId = value.Id, Role = value.Role };
 				var data = JsonConvert.SerializeObject(userId);
 				return Ok(data);
 			}
