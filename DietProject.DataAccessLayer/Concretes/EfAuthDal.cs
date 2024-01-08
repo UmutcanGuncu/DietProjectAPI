@@ -33,7 +33,9 @@ namespace DietProject.DataAccessLayer.Concretes
                 Name = user.Name,
                 Surname = user.Surname,
                 UserName = user.UserName,
-                Email = user.Email
+                Email = user.Email,
+                UserRole = user.UserRole
+
             };
             var result =  await _userManager.CreateAsync(appUser, user.Password);
             return result.Succeeded;

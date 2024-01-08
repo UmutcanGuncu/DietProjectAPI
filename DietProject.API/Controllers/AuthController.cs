@@ -26,6 +26,7 @@ namespace DietProject.API.Controllers
         [HttpPost("register")]
 		public async Task<IActionResult> RegisterUser(RegisterUser user)
 		{
+		
 			var result = await _authService.RegisterUser(user);
 			if(result == true)
 			{
@@ -48,7 +49,7 @@ namespace DietProject.API.Controllers
 			if(result == true)
 			{
 				var value = await _userManager.FindByEmailAsync(user.Email);
-				var userId = new UserIdDTO { UserId = value.Id, Role = value.Role };
+				var userId = new UserIdDTO { UserId = value.Id, Role = value.UserRole };
 				var data = JsonConvert.SerializeObject(userId);
 				return Ok(data);
 			}
